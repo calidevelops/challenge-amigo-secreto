@@ -1,7 +1,20 @@
 //array para almacenar los nombres
 const lista_amigos = [];
-
 const entrada_nombre = document.querySelector('.input-name');
+const lista_amigos_elemento = document.querySelector('.name-list');
+const lista_resultado_elemento = document.querySelector('.result-list');
+
+//funcion para crear elemento amigo (li)
+function agregarElementoAmigo(nombreAmigo) {
+    const amigo_elemento = document.createElement('li');
+    amigo_elemento.textContent = nombreAmigo;
+    return amigo_elemento;
+}
+
+//funcion para limpiar lista
+function limpiarLista(listaElemento) {
+    listaElemento.innerHTML = "";
+}
 
 //funcion para agregar amigos
 function agregarAmigo() {
@@ -16,8 +29,6 @@ function agregarAmigo() {
     }
 }
 
-const lista_amigos_elemento = document.querySelector('.name-list');
-
 //funcion para actualizar lista de amigos
 function actualizarListaAmigos() {
     limpiarLista(lista_amigos_elemento);
@@ -30,8 +41,6 @@ function actualizarListaAmigos() {
     lista_amigos_elemento.appendChild(fragment);
 }
 
-const lista_resultado_elemento = document.querySelector('.result-list');
-
 //funcion para sortear amigos
 function sortearAmigo() {
     limpiarLista(lista_resultado_elemento);
@@ -42,16 +51,4 @@ function sortearAmigo() {
         const amigo_sorteado = lista_amigos[indice_aleatorio];
         lista_resultado_elemento.appendChild(agregarElementoAmigo(amigo_sorteado));
     }
-}
-
-//funcion para crear elemento amigo (li)
-function agregarElementoAmigo(nombreAmigo) {
-    const amigo_elemento = document.createElement('li');
-    amigo_elemento.textContent = nombreAmigo;
-    return amigo_elemento;
-}
-
-//funcion para limpiar lista
-function limpiarLista(listaElemento) {
-    listaElemento.innerHTML = "";
 }

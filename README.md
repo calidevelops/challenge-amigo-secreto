@@ -1,6 +1,6 @@
 # 🎁 Amigo Secreto 
 
-![Captura de pantalla](assets/captura.png)
+![Captura de pantalla](assets/captura.PNG)
 
 Una aplicación web sencilla que permite ingresar una lista de nombres y seleccionar uno al azar. Ideal para sorteos en eventos e intercambios de regalos.
 
